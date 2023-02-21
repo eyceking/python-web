@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Eyce Web</title>
+<title>{{companyName}} Web</title>
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <style>
     #banner{
@@ -22,15 +22,22 @@
 <body>
   <div id="container">
     <div class="mx-auto">
-<h1 class="title"> Eyce Python Web </h1>
+<h1 class="title"> {{companyName}} Python Web </h1>
     </div>
   <img id="banner" src="https://python-web.songspluslyrics.repl.co/static/web-banner.jpg">
   <h2> About EYCE</h2>
 <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-  <p class="h3"> Open Jobs</p>
-  <p class="h3"> Todo show the list of Jobs</p>
+  <p class="h3 mb-4 text-center mt-4"> Open Jobs</p>
+
+  <div>
+
+    {% for job in jobs %}
+      {% include 'jobitem.html'%}
+    {% endfor %}
+    
+  </div>
     <div style ="text-align:center;">
-  <button type="button" class="btn btn-primary" >Contact Us</button>
+  <button type="button" class="btn btn-primary mt-4" >Contact Us</button>
     </div>
   </div> 
 </body>
